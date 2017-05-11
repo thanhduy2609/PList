@@ -28,50 +28,43 @@ class ViewController: UIViewController {
         self.saveData(value: txtValue.text!)
     }
     
-    func loadData(){
+    func loadData() {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
         let documentDirectory = paths[0] as! String
-        let path = documentDirectory.appending("myData.plist")
+        let path = documentDirectory.appending("myData.plist");
         let fileManager = FileManager.default
-        if !fileManager.fileExists(atPath: path){
-            if let bundlePath = Bundle.main.path(forResource: "myData", ofType: "plist"){
+        if !fileManager.fileExists(atPath: path) {
+            if let bundlePath = Bundle.main.path(forResource: "myData", ofType: "plist") {
                 let result = NSMutableDictionary(contentsOfFile: bundlePath)
-                print("Bundle file myData.plist is -> \(result?.description)")
-                do{
+                print("copy sucess")
+                do {
                     try fileManager.copyItem(atPath: bundlePath, toPath: path)
-                }catch{
-                    print("copy failure.")
+                    
                 }
-            } else {
-                print("file myData.plist not found.")
+                catch {
+                    
+                }
+
             }
-        } else {
-            print("file myData.plist alreadly exits at path.")
         }
-        
-        let resultDictionary = NSMutableDictionary(contentsOfFile: path)
-        print("load myData.plist is -> \(resultDictionary?.description)")
-        
-        let myDict = NSDictionary(contentsOfFile: path)
-        if let dict = myDict{
+        let resultDirectory = NSMutableDictionary(contentsOfFile: path)
+        let myDic = NSDictionary(contentsOfFile: path)
+        if let dict = myDic {
             myItemValue = dict.object(forKey: myItemKey) as! String?
             txtValue.text = myItemValue
-        } else {
-            print("Load failure")
         }
     }
     
-    func saveData(value: String){
+    func saveData(value: String) {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
-        let docmentDictionary = paths.object(at: 0) as! String
-        
-        let path = docmentDictionary.appending("myData.plist")
+        let documentDirectory = paths.object(at: 0) as! String
+        let path = documentDirectory.appending("myData.plist");
         
         let dict: NSMutableDictionary = [:]
         
         dict.setObject(value, forKey: myItemKey as NSCopying)
         dict.write(toFile: path, atomically: false)
-        print("Saved!!!")
     }
+    
 }
 
