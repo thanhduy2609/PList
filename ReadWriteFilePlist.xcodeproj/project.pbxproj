@@ -14,6 +14,7 @@
 		2E9B6AA41EC4877F00A4DB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B6AA21EC4877F00A4DB2D /* LaunchScreen.storyboard */; };
 		2E9B6AAF1EC4877F00A4DB2D /* ReadWriteFilePlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B6AAE1EC4877F00A4DB2D /* ReadWriteFilePlistTests.swift */; };
 		2E9B6ABA1EC4877F00A4DB2D /* ReadWriteFilePlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B6AB91EC4877F00A4DB2D /* ReadWriteFilePlistUITests.swift */; };
+		2E9B6AC81EC4878B00A4DB2D /* myData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B6AC71EC4878B00A4DB2D /* myData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2E9B6AB51EC4877F00A4DB2D /* ReadWriteFilePlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadWriteFilePlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9B6AB91EC4877F00A4DB2D /* ReadWriteFilePlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteFilePlistUITests.swift; sourceTree = "<group>"; };
 		2E9B6ABB1EC4877F00A4DB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9B6AC71EC4878B00A4DB2D /* myData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2E9B6AA01EC4877F00A4DB2D /* Assets.xcassets */,
 				2E9B6AA21EC4877F00A4DB2D /* LaunchScreen.storyboard */,
 				2E9B6AA51EC4877F00A4DB2D /* Info.plist */,
+				2E9B6AC71EC4878B00A4DB2D /* myData.plist */,
 			);
 			path = ReadWriteFilePlist;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				2E9B6AA41EC4877F00A4DB2D /* LaunchScreen.storyboard in Resources */,
 				2E9B6AA11EC4877F00A4DB2D /* Assets.xcassets in Resources */,
+				2E9B6AC81EC4878B00A4DB2D /* myData.plist in Resources */,
 				2E9B6A9F1EC4877F00A4DB2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
