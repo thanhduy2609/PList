@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  ReadWriteFilePlist
 //
-//  Created by Kiet Nguyen on 5/11/17.
-//  Copyright © 2017 Kiet Nguyen. All rights reserved.
+//  Created by Thanh Duy on 5/11/17.
+//  Copyright © 2017 Thanh Duy. All rights reserved.
 //
 
 import UIKit
